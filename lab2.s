@@ -27,8 +27,8 @@ tongLe: .space 4
     .global Reset_Handler
     .thumb_func
 Reset_Handler:
-    LDR RO, =N
-    LDR RO, [R0]
+    LDR R0, =N
+    LDR R0, [R0]
 
     MOV R1, #0
     MOV R2, #0
@@ -63,3 +63,4 @@ stop:
     B stop
 
     .end
+    

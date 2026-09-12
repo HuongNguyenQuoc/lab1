@@ -1,0 +1,2 @@
+arm-none-eabi-as -mcpu=cortex-m3 -mthumb -g lab2.s -o lab2.o
+arm-none-eabi-ld -T link.ld lab2.o -o lab2.elf
