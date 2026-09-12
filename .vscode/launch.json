@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Lab1 (QEMU)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "qemu",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/lab1.elf",
+      "cpu": "cortex-m3",
+      "machine": "lm3s6965evb",
+      "gdbPath": "gdb-multiarch",
+      "toolchainPrefix": "arm-none-eabi",
+      "objdumpPath": "/usr/bin/arm-none-eabi-objdump",
+      "runToEntryPoint": "Reset_Handler",
+      "preLaunchTask": "build"
+    }
+  ]
+}
