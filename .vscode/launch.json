@@ -13,7 +13,6 @@
       "gdbPath": "gdb-multiarch",
       "toolchainPrefix": "arm-none-eabi",
       "objdumpPath": "/usr/bin/arm-none-eabi-objdump",
-      "runToEntryPoint": "Reset_Handler",
       "preLaunchTask": "build"
     }
   ]
