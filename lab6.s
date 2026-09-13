@@ -33,32 +33,21 @@ Reset_Handler:
     LDR R1, [R1]
 
     MOV R2, #2
-    MOV R5, #1
-    
-loop1:
-    CMP R2, R1
-    BHI done1
-    
+    MOV R3, R0
     MOV R4, #1
-    MOV R3, #1
 
-    loop2:
-        CMP R3, R2
-        BHI done2
+loop:
+    CMP R2, R1
+    BGT done
 
-        MUL R4, R4, R0
-        ADD R3, R3, #1
-        B loop2
-
-    done2:
-        ADD R5, R5, R4
-    
+    MUL R3, R3, R0
+    ADD R4, R4, R3
     ADD R2, R2, #1
-    B loop1
+    B loop
 
-done1:
-    LDR R6, =tongS
-    STR R5, [R6]
+done:
+    LDR R5, =tongS
+    STR R4, [R5]
 
 stop:
     B stop
